@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIButton {
-    func configureButtonStyle(title: String? = nil,
+    func configureConversionButtonStyle(title: String? = nil,
                               iconName: String
     ) {
         setTitle(title, for: .normal)
@@ -19,5 +19,19 @@ extension UIButton {
         backgroundColor = .init(red: 234/255, green: 202/255, blue: 207/255, alpha: 1)
         tintColor = .systemGray
         cornerRadius = 10
+    }
+    
+    convenience init(bgColor: UIColor, title: String = "") {
+        self.init(frame: .zero)
+        self.backgroundColor = bgColor
+         self.setTitle(title, for: .normal)
+        configureGeneralButton()
+    }
+    
+    func configureGeneralButton() {
+        self.cornerRadius           = 10
+        titleLabel?.textColor       = .white
+        titleLabel?.font            = UIFont.preferredFont(forTextStyle: .headline)
+        translatesAutoresizingMaskIntoConstraints   = false
     }
 }

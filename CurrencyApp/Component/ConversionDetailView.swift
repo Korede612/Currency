@@ -30,7 +30,7 @@ class ConversionDetailView: UIView {
             leftView.addSubview(leftSubView)
             leftSubView.pinConstraint(trailing: leftView.trailingAnchor,
                                          bottom: leftView.bottomAnchor,
-                                         paddingLeft: -10)
+                                         paddingLeft: 10)
             leftSubView.configureSizeConstraints(widthConstraint: leftView.widthAnchor,
                                                  widthMultiplier: leftSizeMulitplier)
             leftSubView.configureSize(height: 50)

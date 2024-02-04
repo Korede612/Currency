@@ -23,6 +23,12 @@
 		936507262B6FBE53007AB256 /* ConversionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507252B6FBE53007AB256 /* ConversionDetailView.swift */; };
 		936507282B6FBEB8007AB256 /* CurrencyTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507272B6FBEB8007AB256 /* CurrencyTopView.swift */; };
 		9365072A2B6FBF15007AB256 /* CurrencyBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507292B6FBF15007AB256 /* CurrencyBottomView.swift */; };
+		9365072C2B6FD892007AB256 /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365072B2B6FD892007AB256 /* CustomAlertVC.swift */; };
+		9365072E2B6FDA6B007AB256 /* Extension + Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365072D2B6FDA6B007AB256 /* Extension + Label.swift */; };
+		936507302B6FDD5E007AB256 /* Extension + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365072F2B6FDD5E007AB256 /* Extension + Alert.swift */; };
+		936507322B6FDDEB007AB256 /* Extension + VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507312B6FDDEB007AB256 /* Extension + VC.swift */; };
+		936507342B6FDF5A007AB256 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507332B6FDF5A007AB256 /* EmptyStateView.swift */; };
+		936507372B6FE766007AB256 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507362B6FE766007AB256 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,12 @@
 		936507252B6FBE53007AB256 /* ConversionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDetailView.swift; sourceTree = "<group>"; };
 		936507272B6FBEB8007AB256 /* CurrencyTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTopView.swift; sourceTree = "<group>"; };
 		936507292B6FBF15007AB256 /* CurrencyBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBottomView.swift; sourceTree = "<group>"; };
+		9365072B2B6FD892007AB256 /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		9365072D2B6FDA6B007AB256 /* Extension + Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Label.swift"; sourceTree = "<group>"; };
+		9365072F2B6FDD5E007AB256 /* Extension + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Alert.swift"; sourceTree = "<group>"; };
+		936507312B6FDDEB007AB256 /* Extension + VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + VC.swift"; sourceTree = "<group>"; };
+		936507332B6FDF5A007AB256 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		936507362B6FE766007AB256 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C140BEA5B00A72B9A0F43056 /* Pods_CurrencyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +105,7 @@
 		936506FB2B6F7AD8007AB256 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				936507352B6FE733007AB256 /* ConversionDetail */,
 				936507122B6FBC27007AB256 /* CurrencyConverter */,
 			);
 			path = Features;
@@ -116,6 +129,9 @@
 				9365071C2B6FBD93007AB256 /* Extension + Button.swift */,
 				9365071E2B6FBDC0007AB256 /* Extension + String.swift */,
 				936507202B6FBDE7007AB256 /* Extension + TextField.swift */,
+				9365072D2B6FDA6B007AB256 /* Extension + Label.swift */,
+				9365072F2B6FDD5E007AB256 /* Extension + Alert.swift */,
+				936507312B6FDDEB007AB256 /* Extension + VC.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -161,8 +177,18 @@
 			isa = PBXGroup;
 			children = (
 				936507252B6FBE53007AB256 /* ConversionDetailView.swift */,
+				9365072B2B6FD892007AB256 /* CustomAlertVC.swift */,
+				936507332B6FDF5A007AB256 /* EmptyStateView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		936507352B6FE733007AB256 /* ConversionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				936507362B6FE766007AB256 /* DetailViewController.swift */,
+			);
+			path = ConversionDetail;
 			sourceTree = "<group>";
 		};
 		97FD6C7D6A24FF9A13D9583D /* Frameworks */ = {
@@ -296,19 +322,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936507342B6FDF5A007AB256 /* EmptyStateView.swift in Sources */,
 				936506FF2B6F7C19007AB256 /* Extension + View.swift in Sources */,
 				936507282B6FBEB8007AB256 /* CurrencyTopView.swift in Sources */,
+				936507302B6FDD5E007AB256 /* Extension + Alert.swift in Sources */,
 				936507152B6FBC86007AB256 /* CurrencyViewModel.swift in Sources */,
 				936506EC2B6F7557007AB256 /* CurrencyViewController.swift in Sources */,
 				936506E82B6F7557007AB256 /* AppDelegate.swift in Sources */,
+				9365072E2B6FDA6B007AB256 /* Extension + Label.swift in Sources */,
 				9365071B2B6FBD18007AB256 /* CurrencyView.swift in Sources */,
 				9365072A2B6FBF15007AB256 /* CurrencyBottomView.swift in Sources */,
+				936507372B6FE766007AB256 /* DetailViewController.swift in Sources */,
 				9365071F2B6FBDC0007AB256 /* Extension + String.swift in Sources */,
+				9365072C2B6FD892007AB256 /* CustomAlertVC.swift in Sources */,
 				936506EA2B6F7557007AB256 /* SceneDelegate.swift in Sources */,
 				936507212B6FBDE7007AB256 /* Extension + TextField.swift in Sources */,
 				936507262B6FBE53007AB256 /* ConversionDetailView.swift in Sources */,
 				936507192B6FBCE3007AB256 /* CurrencyItem.swift in Sources */,
 				9365071D2B6FBD93007AB256 /* Extension + Button.swift in Sources */,
+				936507322B6FDDEB007AB256 /* Extension + VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

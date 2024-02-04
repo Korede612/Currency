@@ -24,6 +24,11 @@ class CurrencyViewController: UIViewController {
         super.viewDidLayoutSubviews()
         conversionView.pin(to: view)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presentAlertVCMainThread(title: "Error", message: "Unable to fetch data", buttonTitle: "Dismiss")
+    }
 
 }
 

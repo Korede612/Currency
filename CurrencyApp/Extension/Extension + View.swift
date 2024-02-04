@@ -70,11 +70,11 @@ extension UIView {
         }
         
         if let trailing {
-            trailingAnchor.constraint(equalTo: trailing, constant: paddingRight).isActive = true
+            trailingAnchor.constraint(equalTo: trailing, constant: -paddingRight).isActive = true
         }
         
         if let bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: paddingBottom).isActive = true
+            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
         }
         
         if let leading {

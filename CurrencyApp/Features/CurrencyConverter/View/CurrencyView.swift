@@ -46,9 +46,9 @@ class CurrencyView: UIView {
         fromTextField.configureTextField()
         toTextField.configureTextField()
         
-        fromButton.configureButtonStyle(title: "From", iconName: "arrow.down")
-        toButton.configureButtonStyle(title: "To", iconName: "arrow.down")
-        swapButton.configureButtonStyle(iconName: "arrow.left.arrow.right")
+        fromButton.configureConversionButtonStyle(title: "From", iconName: "arrow.down")
+        toButton.configureConversionButtonStyle(title: "To", iconName: "arrow.down")
+        swapButton.configureConversionButtonStyle(iconName: "arrow.left.arrow.right")
         
         fromTextField.addLeftPadding(padding: 5)
         toTextField.addLeftPadding(padding: 5)

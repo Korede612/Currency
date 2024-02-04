@@ -31,7 +31,7 @@ class CurrencyTopView: UIView {
         buttonViews.pinConstraint(trailing: contentView.trailingAnchor,
                                      bottom: textFields.topAnchor,
                                      leading: contentView.leadingAnchor,
-                                     paddingBottom: -10
+                                     paddingBottom: 10
         )
         buttonViews.configureSize(height: 52)
         
