@@ -14,6 +14,15 @@
 		936506F12B6F755B007AB256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936506F02B6F755B007AB256 /* Assets.xcassets */; };
 		936506F42B6F755B007AB256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936506F22B6F755B007AB256 /* LaunchScreen.storyboard */; };
 		936506FF2B6F7C19007AB256 /* Extension + View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936506FE2B6F7C19007AB256 /* Extension + View.swift */; };
+		936507152B6FBC86007AB256 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507142B6FBC86007AB256 /* CurrencyViewModel.swift */; };
+		936507192B6FBCE3007AB256 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507182B6FBCE3007AB256 /* CurrencyItem.swift */; };
+		9365071B2B6FBD18007AB256 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365071A2B6FBD18007AB256 /* CurrencyView.swift */; };
+		9365071D2B6FBD93007AB256 /* Extension + Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365071C2B6FBD93007AB256 /* Extension + Button.swift */; };
+		9365071F2B6FBDC0007AB256 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365071E2B6FBDC0007AB256 /* Extension + String.swift */; };
+		936507212B6FBDE7007AB256 /* Extension + TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507202B6FBDE7007AB256 /* Extension + TextField.swift */; };
+		936507262B6FBE53007AB256 /* ConversionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507252B6FBE53007AB256 /* ConversionDetailView.swift */; };
+		936507282B6FBEB8007AB256 /* CurrencyTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507272B6FBEB8007AB256 /* CurrencyTopView.swift */; };
+		9365072A2B6FBF15007AB256 /* CurrencyBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507292B6FBF15007AB256 /* CurrencyBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +36,15 @@
 		936506F32B6F755B007AB256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		936506F52B6F755B007AB256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936506FE2B6F7C19007AB256 /* Extension + View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + View.swift"; sourceTree = "<group>"; };
+		936507142B6FBC86007AB256 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
+		936507182B6FBCE3007AB256 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
+		9365071A2B6FBD18007AB256 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
+		9365071C2B6FBD93007AB256 /* Extension + Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Button.swift"; sourceTree = "<group>"; };
+		9365071E2B6FBDC0007AB256 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
+		936507202B6FBDE7007AB256 /* Extension + TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + TextField.swift"; sourceTree = "<group>"; };
+		936507252B6FBE53007AB256 /* ConversionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDetailView.swift; sourceTree = "<group>"; };
+		936507272B6FBEB8007AB256 /* CurrencyTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTopView.swift; sourceTree = "<group>"; };
+		936507292B6FBF15007AB256 /* CurrencyBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBottomView.swift; sourceTree = "<group>"; };
 		C140BEA5B00A72B9A0F43056 /* Pods_CurrencyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,20 +81,21 @@
 		936506E62B6F7557007AB256 /* CurrencyApp */ = {
 			isa = PBXGroup;
 			children = (
+				936507222B6FBE02007AB256 /* Component */,
 				936506FD2B6F7C02007AB256 /* Extension */,
 				936506FC2B6F7AF1007AB256 /* Resources */,
-				936506FB2B6F7AD8007AB256 /* View */,
+				936506FB2B6F7AD8007AB256 /* Features */,
 				936506F52B6F755B007AB256 /* Info.plist */,
 			);
 			path = CurrencyApp;
 			sourceTree = "<group>";
 		};
-		936506FB2B6F7AD8007AB256 /* View */ = {
+		936506FB2B6F7AD8007AB256 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				936506EB2B6F7557007AB256 /* CurrencyViewController.swift */,
+				936507122B6FBC27007AB256 /* CurrencyConverter */,
 			);
-			path = View;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		936506FC2B6F7AF1007AB256 /* Resources */ = {
@@ -94,8 +113,56 @@
 			isa = PBXGroup;
 			children = (
 				936506FE2B6F7C19007AB256 /* Extension + View.swift */,
+				9365071C2B6FBD93007AB256 /* Extension + Button.swift */,
+				9365071E2B6FBDC0007AB256 /* Extension + String.swift */,
+				936507202B6FBDE7007AB256 /* Extension + TextField.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		936507122B6FBC27007AB256 /* CurrencyConverter */ = {
+			isa = PBXGroup;
+			children = (
+				936507172B6FBCA1007AB256 /* Model */,
+				936507162B6FBC93007AB256 /* View */,
+				936507132B6FBC6A007AB256 /* ViewModel */,
+				936506EB2B6F7557007AB256 /* CurrencyViewController.swift */,
+			);
+			path = CurrencyConverter;
+			sourceTree = "<group>";
+		};
+		936507132B6FBC6A007AB256 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				936507142B6FBC86007AB256 /* CurrencyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		936507162B6FBC93007AB256 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9365071A2B6FBD18007AB256 /* CurrencyView.swift */,
+				936507272B6FBEB8007AB256 /* CurrencyTopView.swift */,
+				936507292B6FBF15007AB256 /* CurrencyBottomView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		936507172B6FBCA1007AB256 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				936507182B6FBCE3007AB256 /* CurrencyItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		936507222B6FBE02007AB256 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				936507252B6FBE53007AB256 /* ConversionDetailView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		97FD6C7D6A24FF9A13D9583D /* Frameworks */ = {
@@ -230,9 +297,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				936506FF2B6F7C19007AB256 /* Extension + View.swift in Sources */,
+				936507282B6FBEB8007AB256 /* CurrencyTopView.swift in Sources */,
+				936507152B6FBC86007AB256 /* CurrencyViewModel.swift in Sources */,
 				936506EC2B6F7557007AB256 /* CurrencyViewController.swift in Sources */,
 				936506E82B6F7557007AB256 /* AppDelegate.swift in Sources */,
+				9365071B2B6FBD18007AB256 /* CurrencyView.swift in Sources */,
+				9365072A2B6FBF15007AB256 /* CurrencyBottomView.swift in Sources */,
+				9365071F2B6FBDC0007AB256 /* Extension + String.swift in Sources */,
 				936506EA2B6F7557007AB256 /* SceneDelegate.swift in Sources */,
+				936507212B6FBDE7007AB256 /* Extension + TextField.swift in Sources */,
+				936507262B6FBE53007AB256 /* ConversionDetailView.swift in Sources */,
+				936507192B6FBCE3007AB256 /* CurrencyItem.swift in Sources */,
+				9365071D2B6FBD93007AB256 /* Extension + Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

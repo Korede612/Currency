@@ -9,10 +9,20 @@ import UIKit
 
 class CurrencyViewController: UIViewController {
 
+    let conversionView = CurrencyView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .systemBackground
+        
+        view.addSubview(conversionView)
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        conversionView.pin(to: view)
     }
 
 }
