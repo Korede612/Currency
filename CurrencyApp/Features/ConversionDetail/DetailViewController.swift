@@ -10,10 +10,12 @@ import UIKit
 class DetailViewController: UIViewController {
 
     let dismissButton = UIButton(bgColor: .systemBackground, title: "Back")
+    let detailView = DetailView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
+        view.addSubview(detailView)
         view.addSubview(dismissButton)
         dismissButton.addTarget(self, action: #selector(dismissButtonTapped), for: .touchUpInside)
         // Do any additional setup after loading the view.
@@ -26,6 +28,7 @@ class DetailViewController: UIViewController {
                                     paddingTop: 50,
                                     paddingLeft: 20)
         dismissButton.setTitleColor(.black, for: .normal)
+        detailView.pin(to: view)
     }
     
     @objc private func dismissButtonTapped(_ sender: UIButton) {

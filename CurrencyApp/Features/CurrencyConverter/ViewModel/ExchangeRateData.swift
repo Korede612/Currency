@@ -12,6 +12,6 @@ protocol ExchangeRateData: DataStorable {
 
 extension ExchangeRateData {
     var exchangeRateData: [String: Double] {
-        return retrieveData(for: "exchangeRate", type: [String: Double].self) ?? [:] // will be removing this later
+        return retrieveData(for: "exchangeRate", type: [String: Double].self) ?? [:]
     }
 }

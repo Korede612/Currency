@@ -93,7 +93,6 @@ class CurrencyViewController: UIViewController {
         fromButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self else { return }
-                print("fromButtonTapObservable tapped!")
                 // You can perform any action here
                 showCurrencies(button: fromButton)
             })
@@ -104,7 +103,6 @@ class CurrencyViewController: UIViewController {
         toButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self else { return }
-                print("toButtonTapObservable tapped!")
                 // You can perform any action here
                 showCurrencies(button: toButton)
             })
@@ -203,15 +201,22 @@ class CurrencyViewController: UIViewController {
         pickerViewController.view.addSubview(pickerView)
         pickerView.pin(to: pickerViewController.view)
         
-        let alertController = UIAlertController(title: "Select Currency", message: nil, preferredStyle: .actionSheet)
-        alertController.setValue(pickerViewController, forKey: "contentViewController")
+        let alertController = UIAlertController(title: "Select Currency", 
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+        alertController.setValue(pickerViewController, 
+                                 forKey: "contentViewController")
         
-        alertController.addAction(UIAlertAction(title: "Done", style: .default, handler: {_ in
+        alertController.addAction(UIAlertAction(title: "Done", 
+                                                style: .default,
+                                                handler: {_ in
             self.pickerView = nil
             self.pickerViewController = nil
             self.performConversion()
         }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
+        alertController.addAction(UIAlertAction(title: "Cancel", 
+                                                style: .cancel,
+                                                handler: {_ in
             self.pickerView = nil
             self.pickerViewController = nil
             button.setTitle(tempTitle, for: .normal)

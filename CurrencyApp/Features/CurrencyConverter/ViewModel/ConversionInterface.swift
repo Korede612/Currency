@@ -6,7 +6,7 @@
 //
 
 import Foundation
-protocol ConversionInterface: ExchangeRateData {
+protocol ConversionInterface: ExchangeRateData, FilterHistoryInterface {
     func convertCurrency(from: String, to: String, amount: String) -> String
 }
 
@@ -17,6 +17,17 @@ extension ConversionInterface {
         }
         let baseAmount = convertToBase(from: from, amount: amountInDouble)
         let convertedAmount = convertActualCurrency(to: to, baseAmount: baseAmount)
+        // Persisting the conversion data here
+        let date = Date.now
+        let currency = ["\(from)-\(date)", "\(to)-\(date)"]
+        let values = [amountInDouble, convertedAmount]
+        let currencyFlag = [from, to]
+        let convertHistory = ConversionHistory(currency: currency, valueCount: values, currencyFlag: currencyFlag, date: date)
+        
+        var currentHistoryData = getCurrentHistoryData()
+        currentHistoryData.append(convertHistory)
+        
+        preserveToUserdefault(currentHistoryData, account: "historyData")
         return String(format: "%.2f", convertedAmount)
     }
     

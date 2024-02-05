@@ -11,6 +11,14 @@
 		930171382B710A6C001001FE /* OptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171372B710A6C001001FE /* OptionItem.swift */; };
 		9301713A2B710C12001001FE /* ConversionInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171392B710C12001001FE /* ConversionInterface.swift */; };
 		9301713C2B710CDA001001FE /* ExchangeRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301713B2B710CDA001001FE /* ExchangeRateData.swift */; };
+		9301713F2B7123D0001001FE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301713E2B7123D0001001FE /* DetailView.swift */; };
+		930171412B71244E001001FE /* TopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171402B71244E001001FE /* TopDetailView.swift */; };
+		930171432B712462001001FE /* BottomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171422B712462001001FE /* BottomDetailView.swift */; };
+		930171452B712953001001FE /* Extension + StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171442B712953001001FE /* Extension + StackView.swift */; };
+		930171482B712C72001001FE /* ConversionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171472B712C72001001FE /* ConversionHistory.swift */; };
+		9301714A2B712CC2001001FE /* FlagColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171492B712CC1001001FE /* FlagColor.swift */; };
+		9301714D2B713DB8001001FE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301714C2B713DB8001001FE /* DetailViewModel.swift */; };
+		9301714F2B713FEB001001FE /* FilterHistoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301714E2B713FEB001001FE /* FilterHistoryInterface.swift */; };
 		936506E82B6F7557007AB256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936506E72B6F7557007AB256 /* AppDelegate.swift */; };
 		936506EA2B6F7557007AB256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936506E92B6F7557007AB256 /* SceneDelegate.swift */; };
 		936506EC2B6F7557007AB256 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936506EB2B6F7557007AB256 /* CurrencyViewController.swift */; };
@@ -62,6 +70,14 @@
 		930171372B710A6C001001FE /* OptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionItem.swift; sourceTree = "<group>"; };
 		930171392B710C12001001FE /* ConversionInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionInterface.swift; sourceTree = "<group>"; };
 		9301713B2B710CDA001001FE /* ExchangeRateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateData.swift; sourceTree = "<group>"; };
+		9301713E2B7123D0001001FE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		930171402B71244E001001FE /* TopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailView.swift; sourceTree = "<group>"; };
+		930171422B712462001001FE /* BottomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailView.swift; sourceTree = "<group>"; };
+		930171442B712953001001FE /* Extension + StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + StackView.swift"; sourceTree = "<group>"; };
+		930171472B712C72001001FE /* ConversionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionHistory.swift; sourceTree = "<group>"; };
+		930171492B712CC1001001FE /* FlagColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagColor.swift; sourceTree = "<group>"; };
+		9301714C2B713DB8001001FE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		9301714E2B713FEB001001FE /* FilterHistoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHistoryInterface.swift; sourceTree = "<group>"; };
 		936506E42B6F7557007AB256 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936506E72B6F7557007AB256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936506E92B6F7557007AB256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +136,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9301713D2B7123B6001001FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9301713E2B7123D0001001FE /* DetailView.swift */,
+				930171402B71244E001001FE /* TopDetailView.swift */,
+				930171422B712462001001FE /* BottomDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		930171462B712C5B001001FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				930171472B712C72001001FE /* ConversionHistory.swift */,
+				930171492B712CC1001001FE /* FlagColor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9301714B2B713D96001001FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9301714C2B713DB8001001FE /* DetailViewModel.swift */,
+				9301714E2B713FEB001001FE /* FilterHistoryInterface.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		936506DB2B6F7557007AB256 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +230,7 @@
 				936507312B6FDDEB007AB256 /* Extension + VC.swift */,
 				9365076D2B70D26E007AB256 /* Extension + double.swift */,
 				9365076F2B70D49F007AB256 /* Extension + Date.swift */,
+				930171442B712953001001FE /* Extension + StackView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -243,6 +288,9 @@
 		936507352B6FE733007AB256 /* ConversionDetail */ = {
 			isa = PBXGroup;
 			children = (
+				930171462B712C5B001001FE /* Model */,
+				9301713D2B7123B6001001FE /* View */,
+				9301714B2B713D96001001FE /* ViewModel */,
 				936507362B6FE766007AB256 /* DetailViewController.swift */,
 			);
 			path = ConversionDetail;
@@ -443,9 +491,12 @@
 				936507342B6FDF5A007AB256 /* EmptyStateView.swift in Sources */,
 				936506FF2B6F7C19007AB256 /* Extension + View.swift in Sources */,
 				936507282B6FBEB8007AB256 /* CurrencyTopView.swift in Sources */,
+				930171432B712462001001FE /* BottomDetailView.swift in Sources */,
 				9365074A2B70B3E6007AB256 /* DataStorable.swift in Sources */,
 				9365074E2B70B4DD007AB256 /* UserDefaultManager.swift in Sources */,
+				930171482B712C72001001FE /* ConversionHistory.swift in Sources */,
 				936507302B6FDD5E007AB256 /* Extension + Alert.swift in Sources */,
+				930171452B712953001001FE /* Extension + StackView.swift in Sources */,
 				936507502B70B52C007AB256 /* DataCodableInterface.swift in Sources */,
 				936507702B70D49F007AB256 /* Extension + Date.swift in Sources */,
 				936507152B6FBC86007AB256 /* CurrencyViewModel.swift in Sources */,
@@ -455,8 +506,13 @@
 				9365072E2B6FDA6B007AB256 /* Extension + Label.swift in Sources */,
 				9365071B2B6FBD18007AB256 /* CurrencyView.swift in Sources */,
 				9365072A2B6FBF15007AB256 /* CurrencyBottomView.swift in Sources */,
+				930171412B71244E001001FE /* TopDetailView.swift in Sources */,
+				9301714A2B712CC2001001FE /* FlagColor.swift in Sources */,
 				936507372B6FE766007AB256 /* DetailViewController.swift in Sources */,
+				9301713F2B7123D0001001FE /* DetailView.swift in Sources */,
+				9301714D2B713DB8001001FE /* DetailViewModel.swift in Sources */,
 				9365071F2B6FBDC0007AB256 /* Extension + String.swift in Sources */,
+				9301714F2B713FEB001001FE /* FilterHistoryInterface.swift in Sources */,
 				9365073E2B703051007AB256 /* NetworkManager.swift in Sources */,
 				9365074C2B70B410007AB256 /* DataSecurable.swift in Sources */,
 				9365072C2B6FD892007AB256 /* CustomAlertVC.swift in Sources */,
