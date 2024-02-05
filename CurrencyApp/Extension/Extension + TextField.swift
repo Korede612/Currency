@@ -22,4 +22,8 @@ extension UITextField {
         self.borderColor = borderColor.cgColor
         self.cornerRadius = cornerRadius
     }
+    
+    func configureTextFieldTextToNumber() {
+        self.keyboardType = .numberPad
+    }
 }

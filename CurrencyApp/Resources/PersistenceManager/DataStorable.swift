@@ -25,14 +25,12 @@ extension DataStorable {
             return nil
         }
         catch {
-            print("Unable to retrieve data due to: \(error.localizedDescription)")
             return nil
         }
     }
     
     // MARK: - Secret data storage into Userdefault
     func preserveToUserdefault<T: Codable>(_ value: T, account: String) {
-        print("Checking the user detail: \(value)") //TODO: Will remove :-
         if let codedValue = encode(value) {
             do {
                 try UserdefaultManager.set(value: codedValue, account: account)

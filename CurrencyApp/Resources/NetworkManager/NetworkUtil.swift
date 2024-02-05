@@ -23,8 +23,7 @@ protocol GetFlagInterface {
 extension GetFlagInterface {
     func getFlag(for currency: String) -> String {
         let base: UInt32 = 127397
-        var code = currency.prefix(2).uppercased()
-        print("Here is the country code: \(code)")
+        let code = currency.prefix(2).uppercased()
 
         var flag = ""
         for i in code.unicodeScalars {
@@ -32,7 +31,6 @@ extension GetFlagInterface {
                 flag.append(String(scalarValue))
             }
         }
-        print("Here is the country flag: \(flag)")
         return flag
     }
 }

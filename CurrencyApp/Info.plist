@@ -4,6 +4,11 @@
 <dict>
 	<key>FixerAPIKey</key>
 	<string>$(FIXER_KEY)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

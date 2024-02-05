@@ -15,6 +15,34 @@ class CurrencyViewModel {
     let errorMessage: BehaviorRelay = BehaviorRelay(value: "")
     var converList: [String: Double] = [:]
     
+    var currencies: BehaviorRelay<[CurrencyItemInterface]> = BehaviorRelay(value: [])
+    
+    var convertedAmount: BehaviorRelay<String> = BehaviorRelay(value: "")
+    var swappedCurrencyValue: BehaviorRelay<(String, String)> = BehaviorRelay(value: ("", ""))
+    var swappedAmountValue: BehaviorRelay<(String, String)> = BehaviorRelay(value: ("", ""))
+    
+    init() {
+        currencies.accept(optionList)
+    }
+    
+    func convert(from: String, to: String, amount: String) {
+        let convertedData = convertCurrency(from: from,
+                                            to: to,
+                                            amount: amount)
+            .formattedCurrency
+        convertedAmount.accept(convertedData)
+    }
+    
+    func swapCurrency(from: String, to: String) {
+        if (from == "From" || to == "To") {
+            return
+        }
+        swappedCurrencyValue.accept((to, from))
+    }
+    
+    func swapAmount(fromAmount: String, toAmount: String) {
+        swappedAmountValue.accept((toAmount, fromAmount))
+    }
     
     func configureURL() -> URL? {
         guard let apiUrl = URL(string: "http://data.fixer.io/api/latest?access_key=\(apiKey)") else {
@@ -37,12 +65,15 @@ class CurrencyViewModel {
                         switch result {
                         case .success(let data):
                             print("data: ---\n\(data)")
-                            let time = data.timestamp.convertToTime()
-                            preserveToUserdefault(time,
-                                                  account: "networkCall")
-                            preserveToUserdefault(data.rates, 
-                                                  account: "conversionList")
-                            converList = data.rates
+                            if data.success {
+                                let time = data.timestamp.convertToTime()
+                                preserveToUserdefault(time,
+                                                      account: "networkCall")
+                                preserveToUserdefault(data.rates,
+                                                      account: "exchangeRate")
+                                converList = data.rates
+                            }
+                            
                         case .failure(let error):
                             errorMessage.accept(error.localizedDescription)
                         }
@@ -54,7 +85,7 @@ class CurrencyViewModel {
                 )
                 .disposed(by: disposableBag)
         } else {
-            guard let retreivedData = retrieveData(for: "conversionList", type: [String: Double].self) else {
+            guard let retreivedData = retrieveData(for: "exchangeRate", type: [String: Double].self) else {
                 return
             }
             converList = retreivedData
@@ -65,3 +96,5 @@ class CurrencyViewModel {
 
 extension CurrencyViewModel: FixerKey { }
 extension CurrencyViewModel: NetworkTimeInterval { }
+extension CurrencyViewModel: OptionItemInterface { }
+extension CurrencyViewModel: ConversionInterface { }

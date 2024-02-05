@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol CurrencyItemInterface {
+    var value: String? { get set }
+    var icon: String? { get set }
+}
+
+struct CurrencyItem: CurrencyItemInterface {
+    var value: String?
+    var icon: String?
+}
+
+

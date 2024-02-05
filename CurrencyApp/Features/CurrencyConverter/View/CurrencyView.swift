@@ -44,7 +44,10 @@ class CurrencyView: UIView {
                                  rightSizeMultiplier: 0.8)
         
         fromTextField.configureTextField()
+        fromTextField.configureTextFieldTextToNumber()
+        fromTextField.text = "1"
         toTextField.configureTextField()
+        toTextField.configureTextFieldTextToNumber()
         
         fromButton.configureConversionButtonStyle(title: "From", iconName: "arrow.down")
         toButton.configureConversionButtonStyle(title: "To", iconName: "arrow.down")
