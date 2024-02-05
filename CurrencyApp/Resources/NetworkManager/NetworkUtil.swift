@@ -12,7 +12,7 @@ protocol FixerKey {
 
 extension FixerKey {
     var apiKey: String {
-        Bundle.main.object(forInfoDictionaryKey: "MyFixerAPIKey") as! String
+        Bundle.main.object(forInfoDictionaryKey: "FixerAPIKey") as! String
     }
 }
 
