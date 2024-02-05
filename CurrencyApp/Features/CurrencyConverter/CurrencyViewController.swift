@@ -10,6 +10,7 @@ import UIKit
 class CurrencyViewController: UIViewController {
 
     let conversionView = CurrencyView()
+    let viewModel = CurrencyViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +18,7 @@ class CurrencyViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         view.addSubview(conversionView)
-        
+        viewModel.fetchData()
     }
     
     override func viewDidLayoutSubviews() {

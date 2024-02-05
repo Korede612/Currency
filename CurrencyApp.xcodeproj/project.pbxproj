@@ -38,6 +38,9 @@
 		936507502B70B52C007AB256 /* DataCodableInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365074F2B70B52C007AB256 /* DataCodableInterface.swift */; };
 		936507652B70BB90007AB256 /* CurrencyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507642B70BB90007AB256 /* CurrencyAppTests.swift */; };
 		9365076C2B70BBD6007AB256 /* CurrencyViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365076B2B70BBD6007AB256 /* CurrencyViewModelTest.swift */; };
+		9365076E2B70D26E007AB256 /* Extension + double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365076D2B70D26E007AB256 /* Extension + double.swift */; };
+		936507702B70D49F007AB256 /* Extension + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365076F2B70D49F007AB256 /* Extension + Date.swift */; };
+		936507722B70DC7A007AB256 /* NetworkTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936507712B70DC7A007AB256 /* NetworkTimeInterval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		936507622B70BB90007AB256 /* CurrencyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		936507642B70BB90007AB256 /* CurrencyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAppTests.swift; sourceTree = "<group>"; };
 		9365076B2B70BBD6007AB256 /* CurrencyViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModelTest.swift; sourceTree = "<group>"; };
+		9365076D2B70D26E007AB256 /* Extension + double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + double.swift"; sourceTree = "<group>"; };
+		9365076F2B70D49F007AB256 /* Extension + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Date.swift"; sourceTree = "<group>"; };
+		936507712B70DC7A007AB256 /* NetworkTimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTimeInterval.swift; sourceTree = "<group>"; };
 		C140BEA5B00A72B9A0F43056 /* Pods_CurrencyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,8 @@
 				9365072D2B6FDA6B007AB256 /* Extension + Label.swift */,
 				9365072F2B6FDD5E007AB256 /* Extension + Alert.swift */,
 				936507312B6FDDEB007AB256 /* Extension + VC.swift */,
+				9365076D2B70D26E007AB256 /* Extension + double.swift */,
+				9365076F2B70D49F007AB256 /* Extension + Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 				9365073D2B703050007AB256 /* NetworkManager.swift */,
 				936507442B70B272007AB256 /* NetworkUtil.swift */,
 				936507462B70B2A9007AB256 /* CurrenciesInfo.swift */,
+				936507712B70DC7A007AB256 /* NetworkTimeInterval.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -429,6 +438,7 @@
 				9365074E2B70B4DD007AB256 /* UserDefaultManager.swift in Sources */,
 				936507302B6FDD5E007AB256 /* Extension + Alert.swift in Sources */,
 				936507502B70B52C007AB256 /* DataCodableInterface.swift in Sources */,
+				936507702B70D49F007AB256 /* Extension + Date.swift in Sources */,
 				936507152B6FBC86007AB256 /* CurrencyViewModel.swift in Sources */,
 				936506EC2B6F7557007AB256 /* CurrencyViewController.swift in Sources */,
 				936506E82B6F7557007AB256 /* AppDelegate.swift in Sources */,
@@ -441,10 +451,12 @@
 				9365074C2B70B410007AB256 /* DataSecurable.swift in Sources */,
 				9365072C2B6FD892007AB256 /* CustomAlertVC.swift in Sources */,
 				936506EA2B6F7557007AB256 /* SceneDelegate.swift in Sources */,
+				936507722B70DC7A007AB256 /* NetworkTimeInterval.swift in Sources */,
 				936507212B6FBDE7007AB256 /* Extension + TextField.swift in Sources */,
 				936507262B6FBE53007AB256 /* ConversionDetailView.swift in Sources */,
 				936507192B6FBCE3007AB256 /* CurrencyItem.swift in Sources */,
 				9365071D2B6FBD93007AB256 /* Extension + Button.swift in Sources */,
+				9365076E2B70D26E007AB256 /* Extension + double.swift in Sources */,
 				936507452B70B272007AB256 /* NetworkUtil.swift in Sources */,
 				936507322B6FDDEB007AB256 /* Extension + VC.swift in Sources */,
 				936507472B70B2A9007AB256 /* CurrenciesInfo.swift in Sources */,
