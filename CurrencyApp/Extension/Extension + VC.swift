@@ -45,6 +45,8 @@ extension UIViewController {
         let emptyStateView = EmptyStateView(message: message)
         emptyStateView.frame = view.bounds
         view.addSubview(emptyStateView)
+        emptyStateView.backgroundColor = .systemBackground
+        emptyStateView.dismissButton.addTarget(self, action: #selector(dismissEmptyViewButtonTapped), for: .touchUpInside)
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
@@ -55,5 +57,20 @@ extension UIViewController {
             childVC.view.frame = containerView.bounds
             childVC.didMove(toParent: self)
         }
+    }
+    
+    func remove(childVC: UIViewController, from containverView: UIView) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            containverView.subviews.forEach { view in
+                view.removeFromSuperview()
+            }
+            childVC.removeFromParent()
+            childVC.view.removeFromSuperview()
+        }
+    }
+    
+    @objc private func dismissEmptyViewButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true)
     }
 }

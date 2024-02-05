@@ -38,7 +38,6 @@ class CustomAlertVC: UIViewController {
             titleLabel,
             messageLabel
         ])
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
@@ -98,9 +97,4 @@ class CustomAlertVC: UIViewController {
         titleLabel.configureSize(height: 30)
         titleLabel.text = alertTitle
     }
-    
-    deinit {
-        print("Alertvc is going to sleep")
-    }
-    
 }

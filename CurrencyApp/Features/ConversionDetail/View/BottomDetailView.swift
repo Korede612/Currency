@@ -9,16 +9,24 @@ import UIKit
 
 class BottomDetailView: UIView {
     
+    let headerStackView = UIStackView(distribution: .fillEqually, spacing: 0, axis: .horizontal)
     let stackView = UIStackView(distribution: .fillEqually, spacing: 0, axis: .horizontal)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(stackView)
+        addSubview([headerStackView, stackView])
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        stackView.pinConstraint(top: topAnchor,
+        headerStackView.pinConstraint(top: topAnchor,
+                                      trailing: trailingAnchor,
+                                      leading: leadingAnchor,
+                                      paddingTop: 0,
+                                      paddingRight: 20,
+                                      paddingLeft: 20)
+        headerStackView.configureSize(height: 40)
+        stackView.pinConstraint(top: headerStackView.bottomAnchor,
                                 trailing: safeAreaLayoutGuide.trailingAnchor,
                                 bottom: safeAreaLayoutGuide.bottomAnchor,
                                 leading: safeAreaLayoutGuide.leadingAnchor,

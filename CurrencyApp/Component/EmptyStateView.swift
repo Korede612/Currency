@@ -11,6 +11,7 @@ class EmptyStateView: UIView {
 
     let messageLabel = UILabel(textAlignment: .center, fontSize: 28)
     let imageView = UIImageView(image: UIImage(systemName: "trash"))
+    let dismissButton = UIButton(bgColor: .systemBackground, title: "Back")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,15 +30,24 @@ class EmptyStateView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        configureMessageLabel()
-        configureLogoView()
+        layoutBackButton()
+        layoutMessageLabel()
+        layoutLogoView()
     }
     
     private func configure() {
-        addSubview([messageLabel, imageView])
+        addSubview([messageLabel, imageView, dismissButton])
     }
     
-    private func configureMessageLabel() {
+    private func layoutBackButton() {
+        dismissButton.pinConstraint(top: topAnchor,
+                                    leading: leadingAnchor,
+                                    paddingTop: 50,
+                                    paddingLeft: 20)
+        dismissButton.setTitleColor(.black, for: .normal)
+    }
+    
+    private func layoutMessageLabel() {
         messageLabel.numberOfLines = 0
         messageLabel.textColor = .secondaryLabel
         
@@ -47,8 +57,8 @@ class EmptyStateView: UIView {
         messageLabel.centerView(on: self, axis: .vertical, yOffset: -150)
     }
     
-    private func configureLogoView() {
-        imageView.configureSizeConstraints(widthConstraint: self.widthAnchor, 
+    private func layoutLogoView() {
+        imageView.configureSizeConstraints(widthConstraint: self.widthAnchor,
                                            widthMultiplier: 0.5,
                                            heightConstraint: self.widthAnchor,
                                            heightMultiplier: 0.5)

@@ -34,10 +34,9 @@ extension DataStorable {
         if let codedValue = encode(value) {
             do {
                 try UserdefaultManager.set(value: codedValue, account: account)
-                print("Checking the encoded user detail: \(codedValue)")
             }
             catch {
-                print("Unable to save: \(value)")
+                return
             }
         }
     }
@@ -47,7 +46,7 @@ extension DataStorable {
         do {
             try UserdefaultManager.delete(account: account)
         } catch {
-            print(error.localizedDescription)
+            return 
         }
     }
    

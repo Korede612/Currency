@@ -26,11 +26,15 @@ class CurrencyViewModel {
     }
     
     func convert(from: String, to: String, amount: String) {
-        let convertedData = convertCurrency(from: from,
+        let newConvertedAmount = convertCurrency(from: from,
                                             to: to,
                                             amount: amount)
-            .formattedCurrency
+        let convertedData = String(format: "%.2f", newConvertedAmount).formattedCurrency
         convertedAmount.accept(convertedData)
+        persistConversion(from: from,
+                          to: to,
+                          amountInDouble: Double(amount) ?? 0,
+                          convertedAmount: newConvertedAmount)
     }
     
     func swapCurrency(from: String, to: String) {
@@ -61,10 +65,9 @@ class CurrencyViewModel {
                 .subscribe(
                     onNext: { [weak self] result in
                         guard let self else { return }
-                        // Notify the view that data is fetched
+                        
                         switch result {
                         case .success(let data):
-                            print("data: ---\n\(data)")
                             if data.success {
                                 let time = data.timestamp.convertToTime()
                                 preserveToUserdefault(time,
@@ -78,9 +81,8 @@ class CurrencyViewModel {
                             errorMessage.accept(error.localizedDescription)
                         }
                     },
-                    onError: { error in
-                        // Handle the error if needed
-                        print("Error fetching data: \(error)")
+                    onError: { [weak self] error in
+                        self?.errorMessage.accept(error.localizedDescription)
                     }
                 )
                 .disposed(by: disposableBag)
@@ -98,3 +100,4 @@ extension CurrencyViewModel: FixerKey { }
 extension CurrencyViewModel: NetworkTimeInterval { }
 extension CurrencyViewModel: OptionItemInterface { }
 extension CurrencyViewModel: ConversionInterface { }
+extension CurrencyViewModel: PersistConversion { }

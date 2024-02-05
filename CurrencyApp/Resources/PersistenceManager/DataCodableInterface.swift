@@ -20,7 +20,6 @@ extension DataCodableInterface {
             return encodedData
         }
         catch {
-            print("Failed to encode data: \(error)")
             return nil
         }
     }
@@ -33,7 +32,6 @@ extension DataCodableInterface {
             return decodedData
         }
         catch {
-            print("Failed to decode data: \(error)")
             return nil
         }
     }
