@@ -11,24 +11,24 @@ import RxSwift
 import RxCocoa
 
 final class CurrencyViewModelTest: XCTestCase {
-
+    
     var viewModel: CurrencyViewModel!
     var disposeBag: DisposeBag!
-
-        override func setUp() {
-            super.setUp()
-
-           viewModel = CurrencyViewModel()
-            disposeBag = DisposeBag()
-        }
-
-        override func tearDown() {
-            // Clean up after each test
-            viewModel = nil
-            disposeBag = nil
-            super.tearDown()
-        }
-
+    
+    override func setUp() {
+        super.setUp()
+        
+        viewModel = CurrencyViewModel()
+        disposeBag = DisposeBag()
+    }
+    
+    override func tearDown() {
+        // Clean up after each test
+        viewModel = nil
+        disposeBag = nil
+        super.tearDown()
+    }
+    
     
     func testSuccesfulUrl() {
         let url = viewModel.configureURL()
