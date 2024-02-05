@@ -27,7 +27,6 @@ class CurrencyViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presentAlertVCMainThread(title: "Error", message: "Unable to fetch data", buttonTitle: "Dismiss")
     }
 
 }
