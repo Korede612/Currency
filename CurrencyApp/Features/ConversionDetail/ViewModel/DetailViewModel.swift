@@ -9,5 +9,12 @@ import RxSwift
 import RxCocoa
 
 class DetailViewModel {
+    var data = BehaviorRelay<[ConversionHistory]>(value: [])
     
+    init() {
+        let filteredData = getCurrentHistoryData()
+        data.accept(filteredData)
+    }
 }
+
+extension DetailViewModel: FilterHistoryInterface { }

@@ -26,7 +26,6 @@ class BottomDetailView: UIView {
                                 paddingRight: 20,
                                 paddingBottom: 0,
                                 paddingLeft: 20)
-        stackView.backgroundColor = .blue
     }
     
     required init?(coder: NSCoder) {

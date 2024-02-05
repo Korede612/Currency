@@ -25,4 +25,26 @@ extension Date {
         // Return false if there is an issue with date calculation
         return false
     }
+    
+    func formatRelativeDate() -> String {
+        let calendar = Calendar.current
+        let currentDate = Date()
+
+        if calendar.isDateInToday(self) {
+            return "Today"
+        } else if calendar.isDateInYesterday(self) {
+            return "Yesterday"
+        } else if let twoDaysAgo = calendar.date(byAdding: .day, value: -2, to: currentDate),
+                  self >= twoDaysAgo {
+            // If the date is within the last 2 days
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE" // Display day name
+            return dateFormatter.string(from: self)
+        } else {
+            // For dates older than 2 days, you can customize the formatting as needed
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM d, yyyy"
+            return dateFormatter.string(from: self)
+        }
+    }
 }

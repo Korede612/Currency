@@ -19,6 +19,7 @@
 		9301714A2B712CC2001001FE /* FlagColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171492B712CC1001001FE /* FlagColor.swift */; };
 		9301714D2B713DB8001001FE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301714C2B713DB8001001FE /* DetailViewModel.swift */; };
 		9301714F2B713FEB001001FE /* FilterHistoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301714E2B713FEB001001FE /* FilterHistoryInterface.swift */; };
+		930171522B714545001001FE /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930171512B714545001001FE /* DetailCell.swift */; };
 		936506E82B6F7557007AB256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936506E72B6F7557007AB256 /* AppDelegate.swift */; };
 		936506EA2B6F7557007AB256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936506E92B6F7557007AB256 /* SceneDelegate.swift */; };
 		936506EC2B6F7557007AB256 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936506EB2B6F7557007AB256 /* CurrencyViewController.swift */; };
@@ -78,6 +79,7 @@
 		930171492B712CC1001001FE /* FlagColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagColor.swift; sourceTree = "<group>"; };
 		9301714C2B713DB8001001FE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		9301714E2B713FEB001001FE /* FilterHistoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHistoryInterface.swift; sourceTree = "<group>"; };
+		930171512B714545001001FE /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		936506E42B6F7557007AB256 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936506E72B6F7557007AB256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936506E92B6F7557007AB256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 				9301714E2B713FEB001001FE /* FilterHistoryInterface.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		930171502B7144EA001001FE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				930171512B714545001001FE /* DetailCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		936506DB2B6F7557007AB256 = {
@@ -278,6 +288,7 @@
 		936507222B6FBE02007AB256 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				930171502B7144EA001001FE /* Cells */,
 				936507252B6FBE53007AB256 /* ConversionDetailView.swift */,
 				9365072B2B6FD892007AB256 /* CustomAlertVC.swift */,
 				936507332B6FDF5A007AB256 /* EmptyStateView.swift */,
@@ -520,6 +531,7 @@
 				936507722B70DC7A007AB256 /* NetworkTimeInterval.swift in Sources */,
 				936507212B6FBDE7007AB256 /* Extension + TextField.swift in Sources */,
 				936507262B6FBE53007AB256 /* ConversionDetailView.swift in Sources */,
+				930171522B714545001001FE /* DetailCell.swift in Sources */,
 				936507192B6FBCE3007AB256 /* CurrencyItem.swift in Sources */,
 				9365071D2B6FBD93007AB256 /* Extension + Button.swift in Sources */,
 				9301713C2B710CDA001001FE /* ExchangeRateData.swift in Sources */,

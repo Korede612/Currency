@@ -11,7 +11,12 @@ class DetailView: UIView {
     
     let topDetailView = TopDetailView()
     let bottomDetailView = BottomDetailView()
-    let conversionHistoryTB = UITableView()
+    let conversionHistoryTB: UITableView = {
+        let tbView = UITableView()
+        tbView.register(DetailCell.self, forCellReuseIdentifier: DetailCell.identifier)
+        tbView.rowHeight = 80
+        return tbView
+    }()
     let suggestionTB = UITableView()
 
     override init(frame: CGRect) {
@@ -30,10 +35,6 @@ class DetailView: UIView {
         bottomDetailView.pinConstraint(trailing: trailingAnchor, bottom: bottomAnchor, leading: leadingAnchor)
         topDetailView.configureSizeConstraints(heightConstraint: heightAnchor, heightMultiplier: 0.3)
         bottomDetailView.configureSizeConstraints(heightConstraint: heightAnchor, heightMultiplier: 0.7)
-        
-        topDetailView.backgroundColor = .orange
-        conversionHistoryTB.backgroundColor = .green
-        suggestionTB.backgroundColor = .purple
     }
     
     required init?(coder: NSCoder) {
